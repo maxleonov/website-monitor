@@ -1,0 +1,6 @@
+kafka:
+  bootstrap_servers: ''
+  metrics_topic: 'website-metrics-test'
+postgres:
+  uri: ''
+targets:

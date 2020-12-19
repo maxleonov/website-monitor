@@ -1,0 +1,17 @@
+kafka:
+  bootstrap_servers: ''
+  metrics_topic: 'website-metrics'
+postgres:
+  uri: ''
+targets:
+  - name: example.com
+    target: 'http://example.com'
+    check_interval_seconds: 15
+  - name: example.net
+    target: 'http://example.net'
+    regexp: '.*You may use this\n\s+domain in literature.*'
+    check_interval_seconds: 15
+  - name: example.org
+    target: 'http://example.net'
+    regexp: '.*Something that for sure is not present on the page.*'
+    check_interval_seconds: 10

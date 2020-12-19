@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+message WebsiteAvailabilityMetrics {
+  google.protobuf.Timestamp datetime = 1;
+  string target = 2;
+  float http_response_time = 3;
+  int32 http_status = 4;
+  oneof regexp_match {
+    bool regexp_match_null = 5;
+    bool regexp_match_value = 6;
+  }
+}
